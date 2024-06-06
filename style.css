@@ -180,6 +180,32 @@ h1 {
     line-height: 1.625rem;
 }
 
+.purpose article .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.purpose article .button .line {
+    height: .5rem;
+    width: 100%;
+    background-color: var(--yellow);
+    border-radius: .5rem;
+    position: absolute;
+    opacity: .2;
+    bottom: 0;
+    transform: translateY(30%);
+}
+
+.purpose article:last-of-type .button .line {
+    background-color: var(--soft-red);
+}
+
+.purpose article .button:hover .line {
+    opacity: 1;
+}
+
 .purpose article a {
     text-decoration: none;
     color: var(--dark-blue-header);
@@ -189,30 +215,7 @@ h1 {
     margin-top: 1rem;
     font-size: .9rem;
     position: relative;
-    z-index: 1;
     padding: 0 .5rem;
-}
-
-.purpose article a::after {
-    position: absolute;
-    opacity: .2;
-    content: "";
-    left: 0;
-    top: 70%;
-    display: block;
-    width: 100%;
-    height: .5rem;
-    background-color: var(--yellow);
-    border-radius: .5rem;
-    z-index: -1;
-}
-
-.purpose article:last-of-type a::after {
-    background-color: var(--soft-red);
-}
-
-.purpose article a:hover::after {
-    opacity: 1;
 }
 
 .products article {
@@ -327,7 +330,8 @@ footer .logo {
 }
 
 header .desktop-element,
-main .desktop-element {
+main .desktop-element,
+footer .desktop-element {
     display: none !important;
 }
 
@@ -354,6 +358,7 @@ main .desktop-element {
     }
 
     nav {
+        display: block;
         position: relative;
         transform: none;
         background-color: transparent;
@@ -370,8 +375,8 @@ main .desktop-element {
         flex-direction: row;
         padding: 0;
         color: var(--white);
-        font-size: .8rem;
-        gap: 2.25rem;
+        font-size: 1rem;
+        gap: 2.75rem;
     }
 
     nav ul li:last-of-type {
@@ -443,7 +448,7 @@ main .desktop-element {
 
     .testimonials h4 {
         grid-column: 1 / span 3;
-        letter-spacing: .5rem;
+        letter-spacing: 6px;
     }
 
     .testimonials p {
